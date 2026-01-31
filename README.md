@@ -37,6 +37,17 @@ A grid search was conducted across key strategy parameters (for example, lookbac
 
 ## 3) CSMOM volume-weighted strategy
 
+This strategy combines time-series momentum (TSMOM) and cross-sectional momentum (CSMOM) within a volume-weighted portfolio construction framework. TSMOM measures each asset’s momentum using its own trailing returns, while CSMOM forms relative bets by ranking assets on momentum each day and going long the strongest performers and short the weakest. This is then used to construct the Winner's (Long's) Minus Loser's (Short's) portolfio and positions are then scaled by trading volume so that more liquid assets receive larger weights, which helps reduce exposure to illiquid names and improves tradability under transaction costs. All OHLCV data used is computed on a daily frequency. 
+
+**Signal Construction**
+
+The signal construction function takes in the daily return data for each coin and computes the trailing compounded return over a lookback window L:
+
+<img width="172" height="37" alt="image" src="https://github.com/user-attachments/assets/637b2c42-6723-4af1-8866-d838d1979ebf" />
+
+The function then ranks all coins by this trailing return and goes long the top k coins and short the bottom k coins thus ensuring strategy is market neutral when regime filter conditions are met. To prevent lookahead, which is prevalent in strategies, this signal is then shifted before it's used for portfolio construction.
+
+
 ## 4) Results and discussion
 
 ## 5) Limitations and future work
