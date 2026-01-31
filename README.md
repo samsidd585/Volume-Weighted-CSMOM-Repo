@@ -28,6 +28,11 @@ Here is the OOS strategy performance net of Tcosts:
 
 **Note:-** A 20 BPS assumption was made to account for slippage and TCOST's. Additionally, performance was benchmarked against buy and hold BTC with the OOS period being 2023-11-19 to 2025-11-19.
 
+<img width="786" height="478" alt="image" src="https://github.com/user-attachments/assets/db7b4c6c-a48a-41f7-a480-e9b43882783c" />
+
+
+
+
 
 ## 2) Data collection and preprocessing
 
@@ -56,4 +61,18 @@ Because Crypto markets are higly regime and sentiment driven I decided to use th
 
 ## 4) Results and discussion
 
-## 5) Limitations and future work
+Below is a summary table outlining the strategies OOS performance:
+
+<img width="238" height="373" alt="image" src="https://github.com/user-attachments/assets/386da861-d28a-423a-9dd1-cddb9c96e25f" />
+
+Although the strategy’s out-of-sample Sharpe is comparable to BTC’s Sharpe, the estimated alpha is not statistically significant at conventional levels (alpha t-stat = 1.38). As a result, there is limited evidence that the strategy delivers returns that are orthogonal to the BTC benchmark. Additionally, the backtest exhibits a meaningful maximum drawdown and an extended drawdown duration, as illustrated in the drawdown-duration plot below.
+
+<img width="510" height="480" alt="image" src="https://github.com/user-attachments/assets/1ffc54d0-8983-4e23-bcac-bbf282bed2f0" />
+
+
+
+## 5) Conclusion
+
+Overall, while the strategy improves on a simple TSMOM baseline, it does not meaningfully outperform a buy-and-hold BTC benchmark over the out-of-sample period. That said, there are several clear directions for improvement. One extension is to replace the BTC price-based regime filter with a broader market sentiment proxy, such as the crypto Fear and Greed Index. In addition, because this study is implemented on daily data, it may miss shorter-horizon dynamics in momentum and reversals; evaluating alternative frequencies could improve signal capture and overall performance.
+
+A second extension is to incorporate Twitter-based sentiment measures and use them either as an additional predictive feature or as an input for position sizing and exposure control. In the next phase of this project, I will test whether sentiment signals provide incremental predictive power beyond price and volume-based momentum signals.
