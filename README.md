@@ -63,7 +63,8 @@ Because Crypto markets are higly regime and sentiment driven I decided to use th
 
 Below is a summary table outlining the strategies OOS performance:
 
-<img width="238" height="373" alt="image" src="https://github.com/user-attachments/assets/386da861-d28a-423a-9dd1-cddb9c96e25f" />
+<img width="237" height="365" alt="image" src="https://github.com/user-attachments/assets/c4cf5b32-2889-4c6f-82a7-796d0d52c565" />
+
 
 Although the strategy’s out-of-sample Sharpe is comparable to BTC’s Sharpe, the estimated alpha is not statistically significant at conventional levels (alpha t-stat = 1.38). As a result, there is limited evidence that the strategy delivers returns that are orthogonal to the BTC benchmark. Additionally, the backtest exhibits a meaningful maximum drawdown and an extended drawdown duration, as illustrated in the drawdown-duration plot below.
 
