@@ -16,7 +16,7 @@ Here is the OOS strategy performance net of Tcosts:
 
 **Max DD: 29.7%**
 
-**Max DDD: 247 days** 
+**Max Drawdown Duration: 247 days** 
 
 **Beta: 0.00027**
 
@@ -49,7 +49,7 @@ The function then ranks all coins by this trailing return and goes long the top 
 
 **Portfolio Construction**
 
-The dataframe computed in the signal construction step is used to define Winners (signal=+1) and Losers (signal=-1), which within each dataframe we weight in direct proportionallity to prior day trading volume. We then normalize each leg so weights sum to 1. Again to ensure no lookahead bias the volume data is shifted so that we use yesterday's trading volume in this portfolio construction process. To prevent rapid turnover from eating away at strategies edge a holding period of H is enforced, thus preventing short term noise from impacting returns.
+The dataframe computed in the signal construction step is used to define Winners (signal=+1) and Losers (signal=-1), which within each dataframe we weight in direct proportionallity to prior day trading volume. We then normalize each leg so the long weights sum to 1 and Short weights sum to -1. Again to ensure no lookahead bias the volume data is shifted so that we use yesterday's trading volume in this portfolio construction process. To prevent rapid turnover from eating away at strategies edge a holding period of H is enforced, thus preventing short term noise from impacting returns.
 
 Because Crypto markets are higly regime and sentiment driven I decided to use the BTC simple moving average as a regime filter, which is widely used in technical anlalysis as well by discretionary traders. When BTC prices is below its 200-day moving average, I classified it as a bear market and took a net short position, whereas if the BTC price is above the 365 day moving average I classified it as a bull market and took a net long position. If the price of BTC is between these thresholds the strategy is market neutral. 
 
