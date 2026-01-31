@@ -8,8 +8,6 @@ I also tested a more selective approach that only took positions in assets exhib
 
 Here is the OOS strategy performance net of Tcosts:
 
-**Note:- A 20 BPS assumption was made to account for slippage and TCOST's. Additionally, performance was benchmarked against buy and hold BTC with the OOS period being 2023-11-19 to 2025-11-19**
-
 **Net Sharpe: 1.16**
 
 **Gross Sharpe: 1.68**
@@ -25,6 +23,8 @@ Here is the OOS strategy performance net of Tcosts:
 **Alpha T-stat: 1.38**
 
 **Information Ratio: 0.97**
+
+**Note:-** A 20 BPS assumption was made to account for slippage and TCOST's. Additionally, performance was benchmarked against buy and hold BTC with the OOS period being 2023-11-19 to 2025-11-19
 
 
 ## 2) Data collection and preprocessing
