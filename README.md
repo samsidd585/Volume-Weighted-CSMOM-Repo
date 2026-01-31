@@ -31,7 +31,9 @@ Here is the OOS strategy performance net of Tcosts:
 
 ## 2) Data collection and preprocessing
 
-OHLCV data was sourced from Binance Global using their API, encompassing major cryptocurrencies with an average daily trading volume >$1 million and market capitalization in the top 100 (as of November 2021) excluding stable coins. This data collection process ensures that only liquid coins are considered for the strategy to minimize market manipulation impacting the strategy. A grid search was conducted over multiple variables such as holding period(e.g., 3, 5 , 7) to identify the optimal parameters neighborhood for the strategy in the training set. To avoid overfitting all optimization and gridsearches were carried out insample (11-19-2021 to 11-19-2023) before recording out of sample results.
+OHLCV data was sourced from Binance Global via its API. The universe consists of 77 cryptocurrencies selected from the top 100 by market capitalization (as of November 2021), excluding stablecoins and requiring average daily trading volume above $1M. These filters are intended to focus the strategy on more liquid assets and reduce the impact of illiquidity and microstructure noise.
+
+A grid search was conducted across key strategy parameters (for example, lookback window, holding period, and the number of long and short positions) using the in-sample period 2021-11-19 to 2023-11-19. To reduce the risk of overfitting, all parameter selection was completed in-sample before reporting out-of-sample performance results.
 
 ## 3) Backtest setup and parameter search
 
