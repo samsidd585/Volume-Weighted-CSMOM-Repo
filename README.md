@@ -35,10 +35,8 @@ OHLCV data was sourced from Binance Global via its API. The universe consists of
 
 A grid search was conducted across key strategy parameters (for example, lookback window, holding period, and the number of long and short positions) using the in-sample period 2021-11-19 to 2023-11-19. To reduce the risk of overfitting, all parameter selection was completed in-sample before reporting out-of-sample performance results.
 
-## 3) Backtest setup and parameter search
+## 3) CSMOM volume-weighted strategy
 
-## 4) CSMOM volume-weighted strategy
+## 4) Results and discussion
 
-## 5) Results and discussion
-
-## 6) Limitations and future work
+## 5) Limitations and future work
